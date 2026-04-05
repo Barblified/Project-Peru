@@ -95,7 +95,7 @@ for place in data['places']:
                 'timeZone': 'Europe/London'
             }
         }
-       service.events().insert(calendarId=calendar_id, body=event).execute()
+        service.events().insert(calendarId=calendar_id, body=event).execute()
     
     # Save calendar ID back to YAML
     place['calendar_id'] = calendar_id
