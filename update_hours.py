@@ -95,12 +95,8 @@ for place in data['places']:
                 'timeZone': 'Europe/London'
             }
         }
-    try:
-        service.events().insert(calendarId=calendar_id, body=event).execute()
-    except Exception as e:
-        print(f"Skipping event for {name}: {e}")
-    continue
-
+       service.events().insert(calendarId=calendar_id, body=event).execute()
+    
     # Save calendar ID back to YAML
     place['calendar_id'] = calendar_id
 
