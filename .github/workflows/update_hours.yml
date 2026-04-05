@@ -1,0 +1,20 @@
+name: Update Business Hours
+
+on:
+  schedule:
+    - cron: "0 19 * * 5"
+
+jobs:
+  update-hours:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: pip install google-auth google-auth-oauthlib google-api-python-client googlemaps pyyaml requests
+      - name: Run update script
+        run: python update_hours.py
+        env:
+          PLACES_API_KEY: ${{ secrets.PLACES_API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
