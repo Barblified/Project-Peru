@@ -77,6 +77,8 @@ for place in data['places']:
 
     # Write events
     for period in opening_hours:
+        if 'close' not in period:
+            continue
         day_offset = period['open']['day']
         open_time = period['open']['time']
         close_time = period['close']['time']
