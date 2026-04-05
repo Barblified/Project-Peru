@@ -38,6 +38,3 @@ places:
   - name: "Cassidys Kitchen"
     location: "Hucknall"
     calendar_id: "989d85309cdad376073bf978420f04001296dd989e9ef38bd9a1cd054c38c839@group.calendar.google.com"
-  - name: "The Station Hotel"
-    location: "Hucknall"
-    calendar_id: "cedb1907a673a39a004d3e077011452c62d95054d3900740455d90dde50c8f7b@group.calendar.google.com"
