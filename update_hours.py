@@ -64,6 +64,17 @@ for place in data['places']:
         }).execute()
         calendar_id = new_calendar['id']
 
+    # Delete existing events for next week
+    existing_events = service.events().list(
+        calendarId=calendar_id,
+        timeMin=next_monday.isoformat() + 'Z',
+        timeMax=(next_monday + timedelta(days=7)).isoformat() + 'Z',
+        singleEvents=True
+    ).execute()
+
+    for event in existing_events.get('items', []):
+        service.events().delete(calendarId=calendar_id, eventId=event['id']).execute()
+
     # Write events
     for period in opening_hours:
         day_offset = period['open']['day']
