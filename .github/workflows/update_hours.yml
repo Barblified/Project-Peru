@@ -3,6 +3,7 @@ name: Update Business Hours
 on:
   schedule:
     - cron: "0 19 * * 5"
+  workflow_dispatch:
 
 jobs:
   update-hours:
