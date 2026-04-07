@@ -38,3 +38,6 @@ places:
   - name: "Cassidys Kitchen"
     location: "Hucknall"
     calendar_id: "989d85309cdad376073bf978420f04001296dd989e9ef38bd9a1cd054c38c839@group.calendar.google.com"
+  - name: "Ascent Pharmacy"
+    location: "Hucknall"
+    calendar_id: ""
