@@ -41,3 +41,6 @@ places:
   - name: "Ascent Pharmacy"
     location: "Hucknall"
     calendar_id: ""
+  - name: "Argos"
+    location: "Hucknall"
+    calendar_id: ""
